@@ -103,8 +103,9 @@ const channels = [
 // ======================
 // Display Times
 // ======================
-const FIRST_VIEW_TIME = 3000;
+const FIRST_VIEW_TIME = 300;
 const LOADING_INTERVAL = 300;
+const WELCOME_TIME = 1000;
 
 
 
@@ -147,12 +148,12 @@ function loadingTV() {
   loadingImages.forEach((image, index) => {
     setTimeout(() => {
       changeScreen(image);
-    }, FIRST_VIEW_TIME + (index + 1) * LOADING_INTERVAL);
+    }, FIRST_VIEW_TIME + index * LOADING_INTERVAL);
   });
 
   setTimeout(() => {
     changeScreen(WELCOME_IMAGE);
-  }, FIRST_VIEW_TIME + (loadingImages.length + 1) * LOADING_INTERVAL);
+  }, FIRST_VIEW_TIME + loadingImages.length * LOADING_INTERVAL);
 }
 
 function turnOffTV() {

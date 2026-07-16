@@ -30,11 +30,11 @@ body {
   border: 1px solid gray;
 }
 
-.tv-display.is-off {
+/* .tv-display.is-off {
 }
 
 .tv-display.is-on {
-}
+} */
 
 .btn {
   background-color: darkgray;
@@ -80,4 +80,14 @@ body {
   scale: 1.1;
   transition: 0.3s;
   border: 1px solid dimgray;
+}
+
+
+/* 2026-07-16 add */
+body {
+  margin: 4em;
+}
+
+.tv-header-container {
+  margin-top: 4em;
 }
