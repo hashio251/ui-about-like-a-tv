@@ -20,10 +20,10 @@ const channelButtons = document.querySelectorAll(".button");
 // ======================
 // Channnels
 // ======================
-// const now = Date().now;
+const now = Date.now();
+const firstViewImage =   "assets/images/loading_1.jpg";
 
 const loadingImages = [
-  "assets/images/loading_1.jpg",
   "assets/images/loading_cage0.jpg",
   "assets/images/loading_cage1.jpg",
   "assets/images/loading_cage2.jpg",
@@ -91,11 +91,21 @@ const channels = [
   },
   {
     title: "ch9",
-    image: "https://as1.ftcdn.net/jpg/04/90/51/96/1000_F_490519644_XG7iCZ1U51ozAHBUXpkrWnargCalGrzT.webp",
+    image: now,
     url:"",
     description: "ch9"
   }
 ];
+
+
+
+
+// ======================
+// Display Times
+// ======================
+const FIRST_VIEW_TIME = 300;
+const LOADING_INTERVAL = 300;
+const WELCOME_TIME = 1000;
 
 
 
@@ -125,18 +135,26 @@ function updatePowerButtonStyle() {
 function turnOnTV() {
   isPowerOn = true;
 
-  changeScreen(WELCOME_IMAGE);
+  // changeScreen(WELCOME_IMAGE);
 
   updatePowerButtonStyle();
 }
 
 function loadingTV() {
-  changeScreen(loadingImages[0]);
+  setTimeout(() => {
+    changeScreen(firstViewImage);
+  }, FIRST_VIEW_TIME);
+
+  loadingImages.forEach((image, index) => {
+    setTimeout(() => {
+      changeScreen(image);
+    }, FIRST_VIEW_TIME + index * LOADING_INTERVAL);
+  });
 
   setTimeout(() => {
-    changeScreen(loadingImages[1]);
-  },300);
-};
+    changeScreen(WELCOME_IMAGE);
+  }, FIRST_VIEW_TIME + loadingImages.length * LOADING_INTERVAL);
+}
 
 function turnOffTV() {
   isPowerOn = false;
@@ -153,9 +171,9 @@ function turnOffTV() {
 // ======================
 powerOnButton.addEventListener("click", turnOnTV);
 
-powerOffButton.addEventListener("click", turnOffTV);
-
 powerOnButton.addEventListener("click", loadingTV);
+
+powerOffButton.addEventListener("click", turnOffTV);
 
 channelButtons.forEach((button, index) => {
   button.addEventListener("click", () => {
