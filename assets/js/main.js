@@ -24,6 +24,13 @@ const now = Date.now();
 const firstViewImage =   "assets/images/loading_1.jpg";
 
 const loadingImages = [
+  "assets/images/loading_1.jpg",
+  "assets/images/loading_1.jpg",
+  "assets/images/loading_1.jpg",
+  "assets/images/loading_1.jpg",
+  "assets/images/loading_1.jpg",
+  "assets/images/loading_1.jpg",
+  "assets/images/loading_1.jpg",
   "assets/images/loading_cage0.jpg",
   "assets/images/loading_cage1.jpg",
   "assets/images/loading_cage2.jpg",
@@ -35,6 +42,8 @@ const loadingImages = [
   "assets/images/loading_cage8.jpg",
   "assets/images/loading_cage9.jpg",
   "assets/images/loading_cage10.jpg",
+  "assets/images/loading_success.jpg",
+  "assets/images/loading_success.jpg",
   "assets/images/loading_success.jpg"
 ];
 
