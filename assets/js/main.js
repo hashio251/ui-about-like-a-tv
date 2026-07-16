@@ -47,7 +47,7 @@ const loadingImages = [
   "assets/images/loading_success.jpg"
 ];
 
-const WELCOME_IMAGE = "assets/images/welcome.jpg";
+const WELCOME_IMAGE = "assets/images/welcome_enjoy.jpg";
 
 const channels = [
   {
