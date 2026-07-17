@@ -35,7 +35,7 @@ const loadingImages = [
   "assets/images/loading/loading_cage1.jpg",
   "assets/images/loading/loading_cage2.jpg",
   "assets/images/loading/loading_cage3.jpg",
-  "assets/images/loading/oading_cage4.jpg",
+  "assets/images/loading/loading_cage4.jpg",
   "assets/images/loading/loading_cage5.jpg",
   "assets/images/loading/loading_cage6.jpg",
   "assets/images/loading/loading_cage7.jpg",
